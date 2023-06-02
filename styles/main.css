@@ -54,31 +54,36 @@ img {
     flex-direction: row-reverse;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5%;
+    gap: 10%;
+}
+
+.main__shipping {
+    /* border: solid 1px red; */
+    background-color:  #F2F2F2;
+    flex-basis: 80%;
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 400px;
+    max-width: 400px;
+    padding: 5rem;
+    
+     */
+    
+    border-radius: 1.5rem;
+    height: max-content;
+}
+.main__contact {
+    /* border: solid 1px red; */
+    flex-basis: 80%;
+    /* flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 90%; */
 }
 
 .main__contact--shipping {
     display: flex;
     flex-direction: column;
 }
-
-.main__shipping {
-    /* border: solid 1px red; */
-    background-color:  #F2F2F2;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 90%;
-    padding: 2rem;
-    border-radius: 1.5rem;
-    height: max-content;
-}
-
-.main__contact {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 90%;
-}
-
 .contact--form {
     max-width: 600px;
     margin-block-start: var(--gap-block);
@@ -141,46 +146,49 @@ img {
     border: none;
 }
 
+/* container item 1 */
 .main__shipping--product {
     border: 1px solid yellow;
     display: flex;
     gap: 5%;
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
+    margin-block-end: 5rem;
 }
+/* item 1 */
 .img-container {
-    flex: 1 1 40%;
     aspect-ratio: 1 / 1;
-    /* 
-    
-    */
+    flex: 1 0 40%;
+    border-radius: 1.5rem;
+    overflow: hidden;
 }
+/* item 1 */
 .product-info {
-    flex: 1 1 40%;
+    flex: 0 0 30%;
     display: flex;
     flex-direction: column; 
-      
 }
+
+.main__shipping--total {
+    margin-block-start: 10rem;
+}
+
 .price, .stock {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .stock {
     border: 1px solid black;
     border-radius: 0.5rem;
-
 }
 
 /* Igual o mayor que 700px */
 @media (min-width: 759px) { 
     .main__shipping {
-        flex-basis: 35%;
-        flex-grow: 0;
+        flex-basis: 30%;
+        max-width: 40rem;
     }
     .main__contact {
-        flex-basis: 50%
+        flex-basis: 50%;
     }
     .main, .footer, .header {
         width: 90%;
