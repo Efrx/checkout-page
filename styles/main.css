@@ -52,22 +52,25 @@ img {
 }
 
 .main {
+    height: 90vh;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 10%;
+    justify-content: space-between;
 }
-
+.main__shipping--wraper {
+    flex: 0 0 35%;
+}
 .main__shipping {
     background-color:  #F2F2F2;
     padding: 2rem;
     border-radius: 1.5rem;
-    height: max-content;
-    flex: 0 0 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
 }
 .main__contact {
-    flex: 0 0 50%;
+    flex: 0 0 55%;
 }
 
 .main__contact--shipping {
@@ -138,58 +141,80 @@ img {
 
 /* container item 1 */
 .main__shipping--product {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
     gap: 5%;
-    margin-block-end: 5rem;
-    align-items: center;
 }
 /* item 1 */
 .img-container {
     border-radius: 1.5rem;
     overflow: hidden;
-    min-height: 100%;
-    flex: 0 1 auto;
 }
 /* item 1 */
 .product-info {
-    flex: 0 1 40%;
     display: flex;
-    flex-direction: column; 
-    /* justify-content: space-between; */
+    flex-direction: column;
+    /* justify-content: space-around; */
 }
 .product-info p {
     font-size: var(--pxs-font-size);
 }
 
+.price p:first-child {
+    color: #F2994A;
+    font-size: var(--a-font-size);
+}
+.price p:last-child {
+    text-decoration-line: line-through;
+}
+
 .price, .stock{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 60%;
+    align-self: center;
+    width: 100%;
 }
 .stock {
     border: 1px solid #828282;
     border-radius: 0.5rem;
-    padding-block: 1rem;
-    padding-inline: 1rem;
+    height: auto;
+    padding: 0.5rem;
+    /* padding-block: 1rem; */
+    /* padding-inline: 1rem; */
 }
 .stock p:first-child,
 .stock p:last-child {
     background-color: #BDBDBD;
     border-radius: 0.5rem;
+    padding: 5%;
+    text-align: center;
 }
 
-.main__shipping--total {
-    margin-block-start: 10rem;
-}
 .shipping-total {
-    border-top: 1px solid #BDBDBD;
+    /* border-top: 1px solid #BDBDBD; */
+    margin-block-start: 1.5rem;
+    margin-block-end: 0.5rem;
+
     display: flex;
     justify-content: space-between;
+}
+
+.footer__link {
+    width: 100%;
+    text-align: center;
+}
+.footer__link,
+.footer__link a{
+    color: #BDBDBD;
+    font-size: var(--a-font-size);
 }
 
 /* Igual o menor a 768px */
 @media (max-width: 759px) {
     .main__item {
-        flex-basis: 90%;
+        flex-basis: 100%;
     }
 }
 /* Igual o mayor que 767px */
